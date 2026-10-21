@@ -20,6 +20,16 @@ Or with Node:
 npx serve .
 ```
 
+### Updating the résumé
+
+`resume.html` shows a generated preview image. If you replace `cv.pdf`,
+regenerate `assets/cv-preview.webp` so the preview stays in sync:
+
+```bash
+pdftoppm -png -r 144 -singlefile cv.pdf /tmp/cv
+python3 -c "from PIL import Image; Image.open('/tmp/cv.png').convert('RGB').save('assets/cv-preview.webp', 'WEBP', quality=90, method=6)"
+```
+
 ## Deploy to Vercel
 
 The project is a plain static site: no build step, no dependencies.
@@ -82,5 +92,8 @@ vercel --prod # دپلوی نهایی روی دامنه‌ی اصلی
 
 > نکته: کل صفحه به‌صورت استاتیک سرو می‌شود و ویدیوها از پوشه‌ی `assets/`
 > استریم می‌شوند؛ بنابراین پوشه‌ی `assets` را همراه فایل `index.html` نگه دارید.
+
+> اگر `cv.pdf` را عوض کردید، تصویر پیش‌نمایش `assets/cv-preview.webp` را هم
+> با دستور بالا دوباره بسازید تا صفحه‌ی رزومه هم‌زمان با PDF به‌روز بماند.
 
 

@@ -2,6 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/cv-fa",
+      "destination": "/resume",
+      "permanent": true
+    },
+    {
+      "source": "/cv-fa.html",
+      "destination": "/resume",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/index.html",
