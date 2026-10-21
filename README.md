@@ -4,7 +4,7 @@ Personal landing page — a static, single-page site.
 
 - `index.html` — the page (markup, styles and the React runtime bundle)
 - `resume.html` — résumé preview page (linked from the contact section)
-- `cv.pdf` — the downloadable résumé; `assets/cv-preview.webp` is its preview image
+- `cv.pdf` — the downloadable résumé; `cv.webp` is its preview image
 - `assets/` — hero/about/contact videos, poster images and web fonts
 
 ## Run locally
@@ -23,11 +23,11 @@ npx serve .
 ### Updating the résumé
 
 `resume.html` shows a generated preview image. If you replace `cv.pdf`,
-regenerate `assets/cv-preview.webp` so the preview stays in sync:
+regenerate `cv.webp` so the preview stays in sync:
 
 ```bash
 pdftoppm -png -r 144 -singlefile cv.pdf /tmp/cv
-python3 -c "from PIL import Image; Image.open('/tmp/cv.png').convert('RGB').save('assets/cv-preview.webp', 'WEBP', quality=90, method=6)"
+python3 -c "from PIL import Image; Image.open('/tmp/cv.png').convert('RGB').save('cv.webp', 'WEBP', quality=90, method=6)"
 ```
 
 ## Deploy to Vercel
@@ -66,7 +66,7 @@ is a plain `mailto:` link, so no mail configuration is required for the site its
 
 - فایل اصلی: `index.html`
 - صفحه‌ی رزومه: `resume.html` (از بخش تماس لینک شده است)
-- فایل PDF رزومه: `cv.pdf` — تصویر پیش‌نمایش آن `assets/cv-preview.webp` است
+- فایل PDF رزومه: `cv.pdf` — تصویر پیش‌نمایش آن `cv.webp` است
 - ویدیوها، پوسترها و فونت‌ها: پوشه‌ی `assets/`
 
 **پیش‌نمایش محلی**
@@ -93,7 +93,7 @@ vercel --prod # دپلوی نهایی روی دامنه‌ی اصلی
 > نکته: کل صفحه به‌صورت استاتیک سرو می‌شود و ویدیوها از پوشه‌ی `assets/`
 > استریم می‌شوند؛ بنابراین پوشه‌ی `assets` را همراه فایل `index.html` نگه دارید.
 
-> اگر `cv.pdf` را عوض کردید، تصویر پیش‌نمایش `assets/cv-preview.webp` را هم
+> اگر `cv.pdf` را عوض کردید، تصویر پیش‌نمایش `cv.webp` را هم
 > با دستور بالا دوباره بسازید تا صفحه‌ی رزومه هم‌زمان با PDF به‌روز بماند.
 
 
