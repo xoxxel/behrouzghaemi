@@ -3,7 +3,8 @@
 Personal landing page — a static, single-page site.
 
 - `index.html` — the page (markup, styles and the React runtime bundle)
-- `cv-fa.html` — the Persian résumé, linked from the contact section
+- `resume.html` — résumé preview page (linked from the contact section)
+- `cv.pdf` — the downloadable résumé; `assets/cv-preview.webp` is its preview image
 - `assets/` — hero/about/contact videos, poster images and web fonts
 
 ## Run locally
@@ -54,7 +55,8 @@ is a plain `mailto:` link, so no mail configuration is required for the site its
 این پروژه یک سایت استاتیک تک‌صفحه‌ای است و به هیچ مرحله build نیاز ندارد.
 
 - فایل اصلی: `index.html`
-- رزومه‌ی فارسی: `cv-fa.html` (از بخش تماس لینک شده است)
+- صفحه‌ی رزومه: `resume.html` (از بخش تماس لینک شده است)
+- فایل PDF رزومه: `cv.pdf` — تصویر پیش‌نمایش آن `assets/cv-preview.webp` است
 - ویدیوها، پوسترها و فونت‌ها: پوشه‌ی `assets/`
 
 **پیش‌نمایش محلی**
