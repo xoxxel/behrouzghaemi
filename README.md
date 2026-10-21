@@ -81,7 +81,7 @@ python3 -m http.server 3000
 ۲. در Vercel گزینه‌ی **Add New → Project** را بزنید و مخزن `xoxxel/behrouzghaemi` را انتخاب کنید.
 ۳. Framework را روی **Other** بگذارید؛ Build Command و Output Directory را خالی رها کنید.
 ۴. **Deploy** را بزنید. از این پس هر push روی شاخه‌ی `main` به‌صورت خودکار دپلوی می‌شود.
-
+  
 یا با CLI:
 
 ```bash
